@@ -1,5 +1,6 @@
 server:
   port: 8080
+
 spring:
   mvc:
     servlet:
@@ -13,14 +14,17 @@ spring:
     password:
   jpa:
     hibernate:
-      ddl-auto: update # Pode ser 'validate', 'update', 'create', ou 'create-drop'
+      ddl-auto: create-drop # Cria e remove as tabelas no início e no fim da execução
     show-sql: true # Mostra as queries SQL no console
+    defer-datasource-initialization: true # Adia a inicialização do banco de dados para depois do JPA
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect # Define o dialeto do Hibernate para H2
+  sql:
+    init:
+      mode: always
 
-  # Ativando o console H2 para acessar via navegador
   h2:
     console:
-      enabled: true
-      path: /h2-console
+      enabled: true # Ativa o console H2
+      path: /h2-console # Define o caminho do console H2

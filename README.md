@@ -67,7 +67,7 @@ Por padrão, o projeto utiliza o banco de dados H2 em memória. Para acessá-lo,
 - User: sa
 - Password: (deixe em branco)
 
-#### No projeto existe um arquivo chamado db.sql que possui uma consulta para adicionar alguns dados para teste.
+#### No projeto existe um arquivo chamado data.sql que que o spring utiliza para adicionar alguns dados iniciais ao banco.
 
 ---
 
