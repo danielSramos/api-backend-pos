@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  mvc:
+    servlet:
+      path: /
+  application:
+    name: atv-sinc1
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update # Pode ser 'validate', 'update', 'create', ou 'create-drop'
+    show-sql: true # Mostra as queries SQL no console
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect # Define o dialeto do Hibernate para H2
+
+  # Ativando o console H2 para acessar via navegador
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
